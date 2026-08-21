@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Bubblegum Sans
+Author: Sudtipos
+Url: http://www.fontsquirrel.com/fonts/bubblegum-sans
+
+Font: Delius
+Author: Natalia Raices
+Url: https://www.fontsquirrel.com/fonts/delius

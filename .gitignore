@@ -1,0 +1,26 @@
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Python & Build Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Temporary Script & Capture Dumps
+**/Raw_Temp/
+*.tmp
+*.log
+*~
+*.swp
+*.swo

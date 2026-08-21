@@ -1,0 +1,1 @@
+Success with dup.move(pGroup, ElementPlacement.PLACEATBEGINNING)!

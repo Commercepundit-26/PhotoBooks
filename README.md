@@ -4,7 +4,7 @@ End-to-end autonomous photobook production system for Adobe Illustrator. Contain
 
 ---
 
-## 📁 Repository Structure
+## 📁 Clean Repository Structure
 
 ```
 Photobooks/
@@ -18,7 +18,7 @@ Photobooks/
 │   ├── Book Antiqua
 │   └── Gotham
 ├── Image_Library/               # Curated master photo libraries by theme (Wedding, Couple, Baby, Friends)
-├── New/                         # Photobook Theme Projects
+├── New/                         # Photobook Theme Deliverables
 │   └── Wedding-V2/
 │       ├── Backgorunds/         # 22 High-Res (5.4K) background textures (wed_p01.jpg - wed_p22.jpg)
 │       ├── Previews/
@@ -32,8 +32,6 @@ Photobooks/
 │   ├── Wedding/                 # Master photobook generation & export scripts
 │   ├── Image_Harvesting/        # Image asset scrapers & organizers
 │   └── General/                 # Shared utilities
-├── Stickers/                    # Badge, sticker, and decorative vector assets
-├── SVG/                         # Frame and divider vector graphics
 └── README.md                    # This master guide
 ```
 

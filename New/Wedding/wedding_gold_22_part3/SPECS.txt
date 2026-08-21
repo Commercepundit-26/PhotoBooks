@@ -1,0 +1,87 @@
+PHOTOBOOK BACKGROUNDS — WEDDING / GOLD + GLITTER — 22 PAGES
+===========================================================
+Masters only. Cropping happens on your end.
+
+MASTER   5400 x 5400, 72 DPI, sRGB, JPEG q88 (no chroma subsampling)
+
+WHY 5400 SQUARE
+  The largest dimension needed on either axis is 5400, so a 5400 square is the
+  exact minimum canvas containing all three trims with no upscaling:
+      square      4000 x 4000
+      portrait    3600 x 5400   uses the full height
+      landscape   5400 x 3600   uses the full width
+
+CENTRED CROP WINDOWS (for reference when you cut)
+  square      x/y 700-4700
+  portrait    x 900-4500,  y 0-5400
+  landscape   x 0-5400,    y 900-4500
+
+UNIVERSAL SAFE ZONE   central 3600 x 3600  (x/y 900-4500)
+
+LOCKED DESIGN LANGUAGE (identical across all 22 pages)
+  Ground     warm ivory / soft champagne cold-pressed paper, fine grain
+  Metallic   warm antique gold only — gold leaf, foil flecks, glitter dust
+  Excluded   silver, rose gold, and every non-gold hue
+  Register   light, low contrast, elegant, photographs sit anywhere
+  Variety comes ONLY from density and layout, never from palette.
+
+PAGE INVENTORY
+  p01 banded gold botanical field over quiet ivory
+  p02 sparse dot and fleck scatter
+  p03 champagne wash with gold flecks
+  p04 even glitter veil
+  p05 gold line-art botanical scatter
+  p06 gold leaf flake confetti
+  p07 centred glitter band, lower 45%
+  p08 champagne marble with gold veining
+  p09 tiny gold sparkle scatter
+  p10 gold filigree arc lattice
+  p11 mottled taupe wash with gold speck
+  p12 dense tight gold sprig repeat
+  p13 centred glitter gradient
+  p14 fine gold hairline grid
+  p15 outlined blossom pattern
+  p16 crushed gold foil
+  p17 banded gold leaf cluster field
+  p18 even glitter bokeh
+  p19 geometric gold dot grid
+  p20 gold line-art eucalyptus
+  p21 gold herringbone micro-pattern
+  p22 dense mixed gold confetti
+
+VALIDATION — all 22 pages pass all 8 automated checks
+  EDGE_FRAME     sheet edges, white margins, printed borders
+  EDGE_STEP      spine gutters, page edges, folds (smoothed, so regular
+                 grids and stripes are not false-flagged)
+  CORNER_SPREAD  left-vs-right corner delta — mockups and one-sided vignettes
+  LR_SYMMETRY    left strip vs right strip — the core crop-safety test
+  BAND           a band must be two SUSTAINED regions with its boundary inside
+                 y 900-4500; periodic motif rows correctly score as "no band"
+  INK_DISTRIBUTION  share of visual ink inside the safe window per axis, min
+                 0.50 (an evenly covered page scores ~0.667). Catches
+                 soft-gradient bands that BAND misses.
+  FOCAL          a large hero object near centre
+  PALETTE        share of pixels outside the gold/ivory hue range. All 22
+                 pages scored 0.000 — the language is perfectly consistent.
+
+  Run: python3 validate.py     (writes validation.json)
+  Full per-page numbers are in validation.json.
+
+DELIVERY NOTE
+  Split across 3 zips. These grain-and-glitter textures resist JPEG
+  compression — even at a q74 floor the set totals ~61 MB, over the 50 MB
+  per-file cap. Quality was kept at q88 and the set split instead.
+
+PIPELINE
+  Rendered 4096 x 4096, outer 3% shaved as a trim guard, Lanczos-resampled to
+  5400. Lanczos rather than an ESRGAN-style upscaler: ESRGAN invents crunchy
+  false detail in smooth washes.
+  Models: p01-p08 Nano Banana Pro; p09-p22 Nano Banana 2 (Pro hit sustained
+  rate limits). Both verified statistically and visually consistent — every
+  page scored PALETTE 0.000.
+
+KNOWN MODEL FAILURE TO WATCH FOR
+  The models tend to render "a photograph of an open book" — spine gutter,
+  curling page edge, sheet margin. Hard negatives plus the trim guard suppress
+  it, and LR_SYMMETRY catches it numerically (a book-photo render scores ~58
+  against ~2 for a clean page).

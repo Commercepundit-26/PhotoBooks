@@ -1,0 +1,43 @@
+PHOTOBOOK BACKGROUNDS — LOVE THEME — DEV / PRINT TEST
+=====================================================
+3 test pages, each delivered as a master plus the three trims.
+
+MASTER CANVAS      5600 x 5600
+  Minimum viable is 5400 x 5400 (must be >= the largest trim on both axes).
+  5600 adds 200px of crop slack on every edge.
+
+TRIMS (centre-cropped from the master — never upscaled, never stretched)
+  square      4000 x 4000     crop window x/y 800-4800
+  portrait    3600 x 5400     crop window x 1000-4600, y 100-5500
+  landscape   5400 x 3600     crop window x 100-5500, y 1000-4600
+
+UNIVERSAL SAFE ZONE   central 3600 x 3600  (x/y 1000-4600)
+  This is the only region every trim contains. Anything outside it is
+  expendable, so no page may place a hero element there.
+
+BAND RULE
+  If a page uses a banded layout, the horizontal boundary must sit inside
+  y 1000-4600 on the master, or one of the three trims loses a zone.
+  build.py validates this automatically and prints the measured position.
+
+FILES
+  01_masters_5600x5600   the crop-source master for each page
+  02/03/04               the three production trims, 300 DPI tagged
+  05_crop_proofs         guide overlays — green = landscape, red = portrait,
+                         blue = square, black = the 3600 safe zone
+  build.py               the pipeline; drop new 4096px squares into src/ and run
+
+FORMAT   JPEG quality 96, no chroma subsampling, sRGB, 300 DPI tagged.
+         At 300 DPI: 5400px = 18in, 3600px = 12in.
+         Say the word if the printer needs CMYK conversion or TIFF/PNG.
+
+PIPELINE
+  Rendered at 4096 x 4096 (Nano Banana Pro, its 4K ceiling), outer 3% shaved
+  as a trim guard to remove sheet-edge artefacts, then Lanczos-resampled to
+  5600. Lanczos rather than an ESRGAN-style upscaler: ESRGAN invents crunchy
+  false detail in smooth watercolour washes.
+
+THE THREE PAGES TEST THREE DIFFERENT CROP-SAFETY STRATEGIES
+  page_01  banded    dense all-over motif field over a quiet ivory field
+  page_02  scatter   sparse uniform all-over scatter, safe in any direction
+  page_03  wash      abstract wash, no motifs, no focal point at all

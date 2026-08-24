@@ -17,9 +17,9 @@ For each theme, the system generates the complete 3-size suite (or the specific 
 
 | Size Name | Physical Size | Illustrator Artboard (Points) | Safe Margin Area (1-Inch / 72pt) | Preview Image Resolution | Master File Output |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **1. Square** | $10\times10\text{ in}$ | $720\times720\text{ pt}$ | $X \in [72, 648]$, $Y \in [-72, -648]$ | **$1500\times1500\text{ px}$** (1:1) | `<Theme>_Square_10x10.ai` |
-| **2. Landscape** | $12\times8\text{ in}$ | $864\times576\text{ pt}$ | $X \in [72, 792]$, $Y \in [-72, -504]$ | **$1500\times1000\text{ px}$** (3:2) | `<Theme>_Landscape_12x8.ai` |
-| **3. Portrait** | $8\times12\text{ in}$ | $576\times864\text{ pt}$ | $X \in [72, 504]$, $Y \in [-72, -792]$ | **$1000\times1500\text{ px}$** (2:3) | `<Theme>_Portrait_8x12.ai` |
+| **1. Square** | 10x10\text{ in} | 720x720\text{ pt} | X \in [72, 648], Y \in [-72, -648] | **1500x1500\text{ px}** (1:1) | `<Theme>_Square_10x10.ai` |
+| **2. Landscape** | 12x8\text{ in} | 864x576\text{ pt} | X \in [72, 792], Y \in [-72, -504] | **1500x1000\text{ px}** (3:2) | `<Theme>_Landscape_12x8.ai` |
+| **3. Portrait** | 8x12\text{ in} | 576x864\text{ pt} | X \in [72, 504], Y \in [-72, -792] | **1000x1500\text{ px}** (2:3) | `<Theme>_Portrait_8x12.ai` |
 
 ---
 
@@ -71,9 +71,9 @@ You must operate strictly within the repository workspace using relative paths o
    - Any subtitle, vow, or quote longer than 40 characters MUST include explicit carriage returns (`\r`) to split into 2–4 balanced lines.
    - Never let point text run on a single unbroken line across page boundaries.
 2. **1-Inch (72 pt) Safe Margin Rule**:
-   - Square (10x10): $X \in [72, 648]\text{ pt}$, $Y \in [-72, -648]\text{ pt}$.
-   - Landscape (12x8): $X \in [72, 792]\text{ pt}$, $Y \in [-72, -504]\text{ pt}$.
-   - Portrait (8x12): $X \in [72, 504]\text{ pt}$, $Y \in [-72, -792]\text{ pt}$.
+   - Square (10x10): X \in [72, 648]\text{ pt}, Y \in [-72, -648]\text{ pt}.
+   - Landscape (12x8): X \in [72, 792]\text{ pt}, Y \in [-72, -504]\text{ pt}.
+   - Portrait (8x12): X \in [72, 504]\text{ pt}, Y \in [-72, -792]\text{ pt}.
    - Text must NEVER spill into neighboring artboards or clip off edges.
 3. **Longest-Pattern-First Matching**:
    - When replacing template text placeholders (e.g. `"Heading Goes here too"` vs `"Heading "`), sort dictionary replacement keys by length descending (`b.length - a.length`) to prevent prefix substring collision.
@@ -124,20 +124,20 @@ You must create 4 dedicated layers in exact bottom-to-top stacking order for eac
 
 ### Step 1: Asset Inspection & Photo Categorization
 - Scan `New/<ThemeName>/Backgorunds/` and verify all 22 background images exist.
-- Scan `Image_Library/<ThemeName>/` using Python Pillow and categorize photos into Landscape (aspect ratio $\ge 1.15$), Portrait ($\le 0.85$), and Square ($0.90\text{--}1.10$).
+- Scan `Image_Library/<ThemeName>/` using Python Pillow and categorize photos into Landscape (aspect ratio \ge 1.15), Portrait (\le 0.85), and Square (0.90\text{--}1.10).
 
 ### Step 2: Dynamic Layout Sampling & Font Lock
-- For each size (Square, Landscape, Portrait), sample $\ge 18$ unique text layouts + remaining photo layouts from `Layout/Final Layouts.ai`.
+- For each size (Square, Landscape, Portrait), sample \ge 18 unique text layouts + remaining photo layouts from `Layout/Final Layouts.ai`.
 - Select **ONE consistent 3-font palette** for the theme and lock it across all 3 sizes.
 
 ### Step 3: Build & Export Each Size (Square, Landscape, Portrait)
 For each size:
-1. Create master 22-artboard document in Illustrator with the exact size points ($720\times720$, $864\times576$, or $576\times864$).
+1. Create master 22-artboard document in Illustrator with the exact size points (720x720, 864x576, or 576x864).
 2. Place backgrounds on `Backgrounds`.
 3. Copy layout shapes to `Layout_Shapes`.
 4. Copy and style textframes on `Typography` with locked font palette and `\r` formatting.
 5. Place, scale, and mask photos on `Photos_Masked`.
-6. **Export Blank Previews**: Hide `Photos_Masked`, show `Layout_Shapes`, capture 22 images @ 150 DPI, and resize with Pillow Lanczos to target dimensions (Square: $1500\times1500$, Landscape: $1500\times1000$, Portrait: $1000\times1500$).
+6. **Export Blank Previews**: Hide `Photos_Masked`, show `Layout_Shapes`, capture 22 images @ 150 DPI, and resize with Pillow Lanczos to target dimensions (Square: 1500x1500, Landscape: 1500x1000, Portrait: 1000x1500).
 7. **Export Populated Previews**: Show `Photos_Masked`, hide `Layout_Shapes`, capture 22 images @ 150 DPI, and resize with Pillow Lanczos to target dimensions.
 8. Restore visibility on all 4 layers and save `<ThemeName>_<Size>_<Dimensions>.ai`.
 
@@ -147,8 +147,8 @@ For each size:
 ---
 
 ## 7. Deliverables Checklist for 3-Size Master Package
-- [ ] `Square_10x10`: `<Theme>_Square_10x10.ai` + 22 Blank JPEGs ($1500\times1500$) + 22 Populated JPEGs ($1500\times1500$)
-- [ ] `Landscape_12x8`: `<Theme>_Landscape_12x8.ai` + 22 Blank JPEGs ($1500\times1000$) + 22 Populated JPEGs ($1500\times1000$)
-- [ ] `Portrait_8x12`: `<Theme>_Portrait_8x12.ai` + 22 Blank JPEGs ($1000\times1500$) + 22 Populated JPEGs ($1000\times1500$)
+- [ ] `Square_10x10`: `<Theme>_Square_10x10.ai` + 22 Blank JPEGs (1500x1500) + 22 Populated JPEGs (1500x1500)
+- [ ] `Landscape_12x8`: `<Theme>_Landscape_12x8.ai` + 22 Blank JPEGs (1500x1000) + 22 Populated JPEGs (1500x1000)
+- [ ] `Portrait_8x12`: `<Theme>_Portrait_8x12.ai` + 22 Blank JPEGs (1000x1500) + 22 Populated JPEGs (1000x1500)
 - [ ] Complete automation pipeline script in `Scripts/<ThemeName>/`.
 ```

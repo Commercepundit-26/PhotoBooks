@@ -8,9 +8,9 @@ Permanent operational guidelines and engineering constraints for autonomous phot
 
 | Size Name | Physical Dimensions | Illustrator Points | 1-Inch Safe Margin Boundaries | Preview Resolution (Blank & Populated) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Square 10x10** | $10\times10\text{ in}$ | $720\times720\text{ pt}$ | $X \in [72, 648]\text{ pt}$, $Y \in [-72, -648]\text{ pt}$ | **$1500\times1500\text{ px}$** (1:1 Aspect Ratio) |
-| **Landscape 12x8** | $12\times8\text{ in}$ | $864\times576\text{ pt}$ | $X \in [72, 792]\text{ pt}$, $Y \in [-72, -504]\text{ pt}$ | **$1500\times1000\text{ px}$** (3:2 Aspect Ratio) |
-| **Portrait 8x12** | $8\times12\text{ in}$ | $576\times864\text{ pt}$ | $X \in [72, 504]\text{ pt}$, $Y \in [-72, -792]\text{ pt}$ | **$1000\times1500\text{ px}$** (2:3 Aspect Ratio) |
+| **Square 10x10** | 10x10\text{ in} | 720x720\text{ pt} | X \in [72, 648]\text{ pt}, Y \in [-72, -648]\text{ pt} | **1500x1500\text{ px}** (1:1 Aspect Ratio) |
+| **Landscape 12x8** | 12x8\text{ in} | 864x576\text{ pt} | X \in [72, 792]\text{ pt}, Y \in [-72, -504]\text{ pt} | **1500x1000\text{ px}** (3:2 Aspect Ratio) |
+| **Portrait 8x12** | 8x12\text{ in} | 576x864\text{ pt} | X \in [72, 504]\text{ pt}, Y \in [-72, -792]\text{ pt} | **1000x1500\text{ px}** (2:3 Aspect Ratio) |
 
 ---
 
@@ -29,7 +29,7 @@ Permanent operational guidelines and engineering constraints for autonomous phot
   - For each new book or template, dynamically shuffle and sample available text and photo layouts from `Layout/Final Layouts.ai` so that every photobook has a unique, fresh layout combination.
 - **Strict In-Place Replacement (No Arbitrary Text Frames)**:
   - Text frames must ONLY be placed on layouts that originally contain text in `Final Layouts.ai`.
-  - Retain the exact original $(X, Y)$ coordinates, alignment, and rotation of the source text frames from `Final Layouts.ai`.
+  - Retain the exact original (X, Y) coordinates, alignment, and rotation of the source text frames from `Final Layouts.ai`.
 
 ---
 
@@ -102,6 +102,6 @@ All approved font files reside in `Fonts/`. Reference fonts by their exact PostS
   - Populated Previews: Show `Photos_Masked`, Hide `Layout_Shapes`, Show `Typography`, `Backgrounds` -> Capture 22 PNGs @ 150 DPI.
   - Master Save: Restore visibility on all 4 layers before saving `.ai`.
 - **Resize Previews**:
-  - Square: $1500\times1500\text{ px}$
-  - Landscape: $1500\times1000\text{ px}$
-  - Portrait: $1000\times1500\text{ px}$
+  - Square: 1500x1500\text{ px}
+  - Landscape: 1500x1000\text{ px}
+  - Portrait: 1000x1500\text{ px}

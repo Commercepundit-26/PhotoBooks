@@ -24,3 +24,25 @@ ENV/
 *~
 *.swp
 *.swo
+
+# Local Legacy Folders (Kept Locally, Ignored by Git)
+Halloween/
+Henny_Penny,Love_Ya_Like_A_Sister/
+Src/
+Stickers/
+SVG/
+YearInReview_AtelierMaterials/
+_roundtrip_test.jpg
+font_preview.html
+
+# Local Test Projects inside New/ (Kept Locally, Ignored by Git)
+New/Wedding/
+New/Wedding-Test/
+New/YearInReview/
+New/love_previews_v2/
+New/photobook_love_test/
+New/_roundtrip_test.jpg
+
+# Old Layouts
+Layout/Layouts.ai
+Layout/Unique shape Layouts.ai

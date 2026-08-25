@@ -46,3 +46,7 @@ New/_roundtrip_test.jpg
 # Old Layouts
 Layout/Layouts.ai
 Layout/Unique shape Layouts.ai
+
+# Layout AI files (kept locally, removed from remote git)
+Layout/Final Layouts.ai
+Layout/*.ai

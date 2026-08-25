@@ -8,11 +8,11 @@ End-to-end autonomous photobook production system for Adobe Illustrator. Contain
 
 ```
 Photobooks/
-├── Layout/
-│   └── Final Layouts.ai         # Master Clean Layouts (44 Square, 40 Landscape, 36 Portrait)
+├── Layout/                      # Master Vector Layouts
 ├── Fonts/                       # Approved Typography font files (Script, Serif, Sans, Kids)
-├── Image_Library/               # Curated master photo libraries by theme (Wedding, Couple, Baby, Friends)
-├── New/                         # Photobook Theme Deliverables
+├── Image_Library/               # Curated master photo libraries by theme (Wedding, Baby, Couple, Friends)
+├── backgrounds/                 # Theme Background Libraries (e.g., backgrounds/wedding/)
+├── extra/                       # Reference Deliverables & Completed Themes
 │   └── Wedding-V2/
 │       ├── Backgorunds/         # 22 High-Res (5.4K) background textures (wed_p01.jpg - wed_p22.jpg)
 │       ├── Previews/

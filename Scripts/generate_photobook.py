@@ -20,6 +20,8 @@ sys.stdout.reconfigure(line_buffering=True)
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LAYOUT_FILE = os.path.join(REPO_ROOT, "Layout", "Final Layouts.ai")
+if not os.path.exists(LAYOUT_FILE):
+    LAYOUT_FILE = os.path.join(REPO_ROOT, "Final Layouts 2.ai")
 IMAGE_LIB_DIR = os.path.join(REPO_ROOT, "Image_Library")
 
 FONT_PALETTES = {

@@ -36,17 +36,10 @@ _roundtrip_test.jpg
 font_preview.html
 
 # Local Test Projects inside New/ (Kept Locally, Ignored by Git)
-New/Wedding/
-New/Wedding-Test/
-New/YearInReview/
-New/love_previews_v2/
-New/photobook_love_test/
-New/_roundtrip_test.jpg
+New/
 
-# Old Layouts
+# Old Layouts & AI files
 Layout/Layouts.ai
 Layout/Unique shape Layouts.ai
-
-# Layout AI files (kept locally, removed from remote git)
 Layout/Final Layouts.ai
 Layout/*.ai

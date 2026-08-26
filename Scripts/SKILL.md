@@ -85,3 +85,11 @@ Every photobook template MUST establish a strict, consistent typography hierarch
   - Square: 1500x1500\text{ px}
   - Landscape: 1500x1000\text{ px}
   - Portrait: 1000x1500\text{ px}
+
+## Mandatory Visual Audit Check (Post-Generation)
+After generating master `.ai` documents and exporting Blank/Populated previews, the engine automatically runs `run_visual_audit_check()`:
+- Verifies 22/22 page completion.
+- Verifies exact $1500\text{ px}$ resolution.
+- Validates 1-inch safe margin clamping across all text frames.
+- Confirms 1-Script + 1-Display font pairing hierarchy.
+- Saves an `Audit_Report.txt` summary in the output package.

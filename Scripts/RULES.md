@@ -105,3 +105,13 @@ All approved font files reside in `Fonts/`. Reference fonts by their exact PostS
   - Square: 1500x1500\text{ px}
   - Landscape: 1500x1000\text{ px}
   - Portrait: 1000x1500\text{ px}
+
+---
+
+## 9. MANDATORY VISUAL & GEOMETRIC AUDIT CHECK
+Every photobook generation execution must perform an automated post-generation Visual & Geometric Audit:
+1. **1-Inch Margin Clamp**: Verify no textframe breaches $X \in [72, W-72]$ or $Y \in [-72, -(H-72)]$.
+2. **Dual-Text Font Pairing**: Verify that pages with 2 textframes pair 1 Script Accent with 1 Display/Sans Subtitle (never two script fonts).
+3. **Multi-line Wrapping**: Verify that long quotes and narrow-gap titles use balanced '\r' returns.
+4. **Resolution Validation**: Verify that Blank and Populated JPEGs are exported at exact 1500px dimensions with zero distortion.
+5. **Report Generation**: Output `Audit_Report.txt` in the delivery folder.
